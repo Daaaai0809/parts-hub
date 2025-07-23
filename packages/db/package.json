@@ -1,0 +1,41 @@
+{
+  "name": "db",
+  "private": true,
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "database:generate": "wireit",
+    "database:migrate": "wireit",
+    "start": "wireit"
+  },
+  "wireit": {
+    "database:migrate": {
+      "command": "drizzle-kit push --schema ./src/schema.ts --dialect postgresql",
+      "includes": [
+        "./src/**/*.ts"
+      ]
+    },
+    "database:generate": {
+      "command": "drizzle-kit generate --schema ./src/schema.ts --out ./src/migrations --dialect postgresql",
+      "includes": [
+        "./src/**/*.ts"
+      ]
+    },
+    "start": {
+      "command": "pnpx supabase start"
+    }
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@10.6.5",
+  "dependencies": {
+    "drizzle-orm": "^0.44.3",
+    "wireit": "^0.14.12"
+  },
+  "devDependencies": {
+    "drizzle-kit": "^0.31.4",
+    "supabase": "^2.31.8"
+  }
+}

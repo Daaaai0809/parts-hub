@@ -1,0 +1,46 @@
+{
+  "name": "@parts-hub/api",
+  "type": "module",
+  "scripts": {
+    "dev": "wireit",
+    "build": "wireit",
+    "deploy": "wireit",
+    "cf-typegen": "wireit"
+  },
+  "wireit": {
+    "dev": {
+      "command": "wrangler dev",
+      "includes": [
+        "./src/**/*.ts",
+        "./src/**/*.tsx"
+      ]
+    },
+    "build": {
+      "command": "wrangler build --out-dir ./dist",
+      "includes": [
+        "./src/**/*.ts",
+        "./src/**/*.tsx"
+      ]
+    },
+    "deploy": {
+      "command": "wrangler deploy --minify",
+      "includes": [
+        "./dist/**/*.{js,css}"
+      ]
+    },
+    "cf-typegen": {
+      "command": "wrangler types --env-interface CloudflareBindings",
+      "includes": [
+        "./src/**/*.ts",
+        "./src/**/*.tsx"
+      ]
+    }
+  },
+  "dependencies": {
+    "hono": "^4.8.5",
+    "wireit": "^0.14.12"
+  },
+  "devDependencies": {
+    "wrangler": "^3.114.11"
+  }
+}
