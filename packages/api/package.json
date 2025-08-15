@@ -1,5 +1,5 @@
 {
-  "name": "@parts-hub/api",
+  "name": "parts-hub-api",
   "type": "module",
   "scripts": {
     "dev": "wireit",
@@ -23,10 +23,7 @@
       ]
     },
     "deploy": {
-      "command": "wrangler deploy --minify",
-      "includes": [
-        "./dist/**/*.{js,css}"
-      ]
+      "command": "wrangler deploy --minify"
     },
     "cf-typegen": {
       "command": "wrangler types --env-interface CloudflareBindings",
@@ -41,6 +38,6 @@
     "wireit": "^0.14.12"
   },
   "devDependencies": {
-    "wrangler": "^3.114.11"
+    "wrangler": "^4.25.1"
   }
 }

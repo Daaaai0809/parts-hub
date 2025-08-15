@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "build": "wireit",
-    "migrate:generate": "wireit",
+    "generate": "wireit",
+    "migrate": "wireit",
+    "deploy": "wireit",
     "fix": "wireit",
     "fix:format": "wireit",
     "fix:lint": "wireit",
@@ -20,16 +22,18 @@
         "./packages/api:build"
       ]
     },
-    "migrate:generate": {
+    "generate": {
       "dependencies": [
         "./packages/db:database:generate"
       ]
     },
-    "deploy": {
+    "migrate": {
       "dependencies": [
-        "./packages/api:deploy",
         "./packages/db:database:migrate"
       ]
+    },
+    "deploy": {
+      "command": "cd packages/api && pnpm run deploy"
     },
     "fix:format": {
       "command": "biome format --write",
@@ -81,7 +85,9 @@
   "license": "ISC",
   "packageManager": "pnpm@10.6.5",
   "devDependencies": {
-    "@biomejs/biome": "2.1.2"
+    "@biomejs/biome": "2.1.2",
+    "@types/node": "^24.3.0",
+    "pg": "^8.16.3"
   },
   "dependencies": {
     "wireit": "^0.14.12"

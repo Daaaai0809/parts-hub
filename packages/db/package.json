@@ -11,13 +11,13 @@
   },
   "wireit": {
     "database:migrate": {
-      "command": "drizzle-kit push --schema ./src/schema.ts --dialect postgresql",
+      "command": "drizzle-kit push --config=./drizzle.config.ts",
       "includes": [
         "./src/**/*.ts"
       ]
     },
     "database:generate": {
-      "command": "drizzle-kit generate --schema ./src/schema.ts --out ./src/migrations --dialect postgresql",
+      "command": "drizzle-kit generate --config=./drizzle.config.ts",
       "includes": [
         "./src/**/*.ts"
       ]

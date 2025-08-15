@@ -1,8 +1,9 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
-  "name": "api",
+  "name": "parts-hub-api",
   "main": "src/index.ts",
-  "compatibility_date": "2025-07-18"
+  "compatibility_date": "2025-07-18",
+  "account_id": "86d8f545823c67dcd13d89657854d6ad",
   // "compatibility_flags": [
   //   "nodejs_compat"
   // ],
