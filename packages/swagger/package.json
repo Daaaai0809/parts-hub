@@ -16,7 +16,7 @@
   },
   "wireit": {
     "build": {
-      "command": "openapi --input ./src/swagger.yaml --output ./dist --client fetch && node copy-files.js"
+      "command": "openapi --input ./src/swagger.yaml --output ./dist --client fetch"
     },
     "serve": {
       "command": "http-server ./public -p 8080 -o"
