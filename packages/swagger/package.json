@@ -1,0 +1,25 @@
+{
+  "name": "swagger",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "wireit",
+    "serve": "wireit"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@10.6.5",
+  "dependencies": {
+    "swagger-ui-dist": "^5.27.1"
+  },
+  "wireit": {
+    "build": {
+      "command": "openapi --input ./src/swagger.yaml --output ./dist --client fetch"
+    }
+  },
+  "devDependencies": {
+    "openapi-typescript-codegen": "^0.29.0"
+  }
+}
