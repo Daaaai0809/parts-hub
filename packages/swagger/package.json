@@ -16,10 +16,14 @@
   },
   "wireit": {
     "build": {
-      "command": "openapi --input ./src/swagger.yaml --output ./dist --client fetch"
+      "command": "openapi --input ./src/swagger.yaml --output ./dist --client fetch && node copy-files.js"
+    },
+    "serve": {
+      "command": "http-server ./public -p 8080 -o"
     }
   },
   "devDependencies": {
+    "http-server": "^14.1.1",
     "openapi-typescript-codegen": "^0.29.0"
   }
 }
