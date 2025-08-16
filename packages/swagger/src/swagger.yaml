@@ -1,0 +1,25 @@
+swagger: '2.0'
+info: 
+  version: 1.0.0
+  title: parts-hub-swagger
+  description: parts-hubのAPI定義
+basePath: /api
+schemes:
+  - https
+  - http
+
+definitions:
+  EmptyResponse:
+    $ref: './schema/response/default/empty_response.yaml#/EmptyResponse'
+  ErrorResponse:
+    $ref: './schema/response/default/error_response.yaml#/ErrorResponse'
+  LoginRequest:
+    $ref: './schema/request/client/auth/login_request.yaml#/LoginRequest'
+  SignupRequest:
+    $ref: './schema/request/client/auth/signup_request.yaml#/SignupRequest'
+
+paths:
+  /api/client/auth/login:
+    $ref: './api/client/auth/login.yaml'
+  /api/client/auth/signup:
+    $ref: './api/client/auth/signup.yaml'

@@ -1,0 +1,10 @@
+'ErrorResponse':
+  type: object
+  properties:
+    message:
+      type: string
+    errorMessage:
+      type: string
+  required:
+    - message
+    - errorMessage
