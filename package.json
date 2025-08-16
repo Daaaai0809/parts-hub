@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "wireit",
+    "build:swagger": "wireit",
     "generate": "wireit",
     "migrate": "wireit",
     "deploy": "wireit",
@@ -14,12 +15,19 @@
     "check": "wireit",
     "check:format": "wireit",
     "check:lint": "wireit",
-    "start": "wireit"
+    "start:server": "wireit",
+    "start:db": "wireit",
+    "start:swagger": "wireit"
   },
   "wireit": {
     "build": {
       "dependencies": [
         "./packages/api:build"
+      ]
+    },
+    "build:swagger": {
+      "dependencies": [
+        "./packages/swagger:build"
       ]
     },
     "generate": {
@@ -73,10 +81,19 @@
         "check:lint"
       ]
     },
-    "start": {
+    "start:server": {
       "dependencies": [
-        "./packages/db:start",
         "./packages/api:dev"
+      ]
+    },
+    "start:db": {
+      "dependencies": [
+        "./packages/db:start"
+      ]
+    },
+    "start:swagger": {
+      "dependencies": [
+        "./packages/swagger:serve"
       ]
     }
   },

@@ -1,0 +1,21 @@
+post:
+  operationId: signup
+  summary: ユーザー登録
+  description: ユーザー登録
+  tags: 
+    - Auth
+  parameters:
+    - in: body
+      name: body
+      required: true
+      schema:
+        $ref: '../../../schema/request/client/auth/signup_request.yaml#/SignupRequest'
+  responses:
+    '200':
+      description: ユーザー登録成功
+      schema:
+        $ref: '../../../swagger.yaml#/definitions/EmptyResponse'
+    'default':
+      description: エラー
+      schema:
+        $ref: '../../../swagger.yaml#/definitions/ErrorResponse'

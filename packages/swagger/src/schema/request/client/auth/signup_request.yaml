@@ -1,0 +1,10 @@
+'SignupRequest':
+  type: object
+  properties:
+    username:
+      $ref: '../../../../base/user.yaml#/properties/username'
+    password:
+      $ref: '../../../../base/user.yaml#/properties/password'
+  required:
+    - username
+    - password

@@ -1,0 +1,36 @@
+title: User
+properties:
+  id:
+    type: string
+    format: uuid
+  username:
+    type: string
+    maxLength: 32
+  email:
+    type: string
+    format: email
+  lineId:
+    type: string
+    maxLength: 32
+    nullable: true
+  password:
+    type: string
+    minLength: 8
+    maxLength: 128
+  isActive:
+    type: boolean
+  createdAt:
+    type: string
+    format: date-time
+  updatedAt:
+    type: string
+    format: date-time
+required:
+  - id
+  - username
+  - email
+  - lineId
+  - password
+  - isActive
+  - createdAt
+  - updatedAt
