@@ -1,4 +1,3 @@
 packages:
-  - 'packages/db'
-  - 'packages/api'
-  - 'packages/swagger'
+  - 'packages/*'
+  - 'apps/*'

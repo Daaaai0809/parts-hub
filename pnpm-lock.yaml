@@ -22,6 +22,25 @@ importers:
         specifier: ^8.16.3
         version: 8.16.3
 
+  apps/api:
+    dependencies:
+      '@parts-hub/db':
+        specifier: workspace:^
+        version: link:../../packages/db
+      '@parts-hub/swagger':
+        specifier: workspace:^
+        version: link:../../packages/swagger
+      hono:
+        specifier: ^4.8.5
+        version: 4.8.5
+      wireit:
+        specifier: ^0.14.12
+        version: 0.14.12
+    devDependencies:
+      wrangler:
+        specifier: ^4.25.1
+        version: 4.25.1
+
   packages/api:
     dependencies:
       hono:

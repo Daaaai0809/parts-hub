@@ -1,8 +1,9 @@
 {
-  "name": "swagger",
+  "name": "@parts-hub/swagger",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "dist/index.ts",
+  "types": "dist/index.ts",
   "scripts": {
     "build": "wireit",
     "serve": "wireit"

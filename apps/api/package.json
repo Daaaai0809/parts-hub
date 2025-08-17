@@ -1,5 +1,5 @@
 {
-  "name": "parts-hub-api",
+  "name": "api",
   "type": "module",
   "scripts": {
     "dev": "wireit",
@@ -34,6 +34,8 @@
     }
   },
   "dependencies": {
+    "@parts-hub/db": "workspace:^",
+    "@parts-hub/swagger": "workspace:^",
     "hono": "^4.8.5",
     "wireit": "^0.14.12"
   },

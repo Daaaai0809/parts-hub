@@ -2,7 +2,6 @@
   "name": "parts-hub",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "scripts": {
     "build": "wireit",
     "build:swagger": "wireit",
@@ -22,7 +21,7 @@
   "wireit": {
     "build": {
       "dependencies": [
-        "./packages/api:build"
+        "./apps/api:build"
       ]
     },
     "build:swagger": {
@@ -41,7 +40,7 @@
       ]
     },
     "deploy": {
-      "command": "cd packages/api && pnpm run deploy"
+      "command": "cd apps/api && pnpm run deploy"
     },
     "fix:format": {
       "command": "biome format --write",
@@ -81,7 +80,7 @@
     },
     "start:server": {
       "dependencies": [
-        "./packages/api:dev"
+        "./apps/api:dev"
       ]
     },
     "start:db": {
