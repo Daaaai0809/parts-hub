@@ -4,6 +4,7 @@ info:
   title: parts-hub-swagger
   description: parts-hubのAPI定義
 basePath: /api
+
 schemes:
   - https
   - http
@@ -13,10 +14,13 @@ definitions:
     $ref: './schema/response/default/empty_response.yaml#/EmptyResponse'
   ErrorResponse:
     $ref: './schema/response/default/error_response.yaml#/ErrorResponse'
+  
   LoginRequest:
     $ref: './schema/request/client/auth/login_request.yaml#/LoginRequest'
   SignupRequest:
     $ref: './schema/request/client/auth/signup_request.yaml#/SignupRequest'
+  LoginResponse:
+    $ref: './schema/response/client/auth/login_response.yaml#/LoginResponse'
 
 paths:
   /api/client/auth/login:

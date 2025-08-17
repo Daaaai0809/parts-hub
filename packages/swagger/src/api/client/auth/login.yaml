@@ -14,7 +14,7 @@ post:
     '200':
       description: ログイン成功
       schema:
-        $ref: '../../../swagger.yaml#/definitions/EmptyResponse'
+        $ref: '../../../swagger.yaml#/definitions/LoginResponse'
     'default':
       description: エラー
       schema:

@@ -1,7 +1,7 @@
 'LoginRequest':
   type: object
   properties:
-    userAuth:
+    loginId:
       type: string
       description: ユーザー名またはメールアドレス
     password:
@@ -9,5 +9,5 @@
       minLength: 8
       maxLength: 128
   required:
-    - userAuth
+    - loginId
     - password
