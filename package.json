@@ -68,14 +68,12 @@
       ]
     },
     "fix": {
-      "command": "wireit fix:format && wireit fix:lint",
       "dependencies": [
         "fix:format",
         "fix:lint"
       ]
     },
     "check": {
-      "command": "wireit check:format && wireit check:lint",
       "dependencies": [
         "check:format",
         "check:lint"

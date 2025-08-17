@@ -1,0 +1,15 @@
+node_modules/
+dist/
+.wireit
+.wrangler
+
+package.json
+pnpm-lock.yaml
+pnpm-workspace.yaml
+
+tsconfig.base.json
+tsconfig.json
+
+**/*.jsonc
+
+meta/
