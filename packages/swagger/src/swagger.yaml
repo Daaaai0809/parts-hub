@@ -21,9 +21,17 @@ definitions:
     $ref: './schema/request/client/auth/signup_request.yaml#/SignupRequest'
   LoginResponse:
     $ref: './schema/response/client/auth/login_response.yaml#/LoginResponse'
+  SignupDetailRequest:
+    $ref: './schema/request/client/auth/signup_detail_request.yaml#/SignupDetailRequest'
+  VerifyCodeRequest:
+    $ref: './schema/request/client/auth/verify_code_request.yaml#/VerifyCodeRequest'
 
 paths:
   /api/client/auth/login:
     $ref: './api/client/auth/login.yaml'
   /api/client/auth/signup:
     $ref: './api/client/auth/signup.yaml'
+  /api/client/auth/detail:
+    $ref: './api/client/auth/detail.yaml'
+  /api/client/auth/verify_code:
+    $ref: './api/client/auth/verify_code.yaml'

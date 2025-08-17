@@ -1,0 +1,7 @@
+VerifyCodeRequest:
+  type: object
+  properties:
+    code:
+      type: string
+  required:
+    - code
