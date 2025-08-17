@@ -5,9 +5,7 @@
       type: string
       description: ユーザー名またはメールアドレス
     password:
-      type: string
-      minLength: 8
-      maxLength: 128
+      $ref: '../../../../base/user.yaml#/properties/password'
   required:
     - loginId
     - password

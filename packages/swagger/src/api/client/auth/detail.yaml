@@ -1,0 +1,21 @@
+post:
+  operationId: sendUserDetail
+  summary: ユーザー詳細情報の入力
+  description: 住所氏名等ユーザーに関わる詳細情報(支払い情報を除く)の入力を行う
+  tags:
+    - Auth
+  parameters:
+    - in: body
+      name: body
+      required: true
+      schema:
+        $ref: '../../../swagger.yaml#/definitions/SignupDetailRequest'
+  responses:
+    '200':
+      description:
+      schema:
+        $ref: '../../../swagger.yaml#/definitions/EmptyResponse'
+    'default':
+      description: エラー
+      schema:
+        $ref: '../../../swagger.yaml#/definitions/ErrorResponse'

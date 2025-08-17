@@ -1,0 +1,21 @@
+post:
+  operationId: verifyCode
+  summary: 確認コードの認証
+  description: サービスから発行された確認コードの認証を行う
+  tags:
+    - Auth
+  parameters:
+    - in: body
+      name: body
+      required: true
+      schema:
+        $ref: '../../../swagger.yaml#/definitions/VerifyCodeRequest'
+  responses:
+    '200':
+      description:
+      schema:
+        $ref: '../../../swagger.yaml#/definitions/EmptyResponse'
+    'default':
+      description: エラー
+      schema:
+        $ref: '../../../swagger.yaml#/definitions/ErrorResponse'

@@ -1,0 +1,31 @@
+SignupDetailRequest:
+  type: object
+  properties:
+    password:
+      $ref: '../../../../base/user.yaml#/properties/password'
+    verifyPassword:
+      $ref: '../../../../base/user.yaml#/properties/password'
+    lastName:
+      $ref: '../../../../base/user_detail.yaml#/properties/lastName'
+    firstName:
+      $ref: '../../../../base/user_detail.yaml#/properties/firstName'
+    phoneNumber:
+      $ref: '../../../../base/user_detail.yaml#/properties/phoneNumber'
+    postalCode:
+      $ref: '../../../../base/user_detail.yaml#/properties/postalCode'
+    address:
+      $ref: '../../../../base/user_detail.yaml#/properties/address'
+    city:
+      $ref: '../../../../base/user_detail.yaml#/properties/city'
+    state:
+      $ref: '../../../../base/user_detail.yaml#/properties/state'
+  required:
+    - password
+    - verifyPassword
+    - lastName
+    - firstName
+    - phoneNumber
+    - postalCode
+    - address
+    - city
+    - state
